@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinossauros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dinossauros</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-label="Página inicial">Início</a></li>
+                    <li><a href="wiki.html" aria-label="Wiki dos Dinossauros">Wiki</a></li>
+                    <li><a href="contato.html" aria-label="Página de contato">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao Mundo dos Dinossauros!</h2>
+                <p>Explore a incrível história dos dinossauros, criaturas majestosas que dominaram a Terra há milhões de anos.</p>
+                <a href="wiki.html" class="button" aria-label="Saiba mais sobre os dinossauros">Saiba Mais</a>
+            </div>
+        </section>
+        <section class="featured-dinosaur">
+            <div class="container">
+                <h2>Dinossauro em Destaque</h2>
+                <div class="dinosaur-container" id="dinosaurContainer" tabindex="0" aria-label="Imagem de destaque do Tyrannosaurus Rex">
+                    <img src="trex.jpg" alt="Tyrannosaurus Rex" class="dinosaur">
+                </div>
+            </div>
+        </section>
+    </main>
+  
+    <script>
+        const dinosaurContainer = document.getElementById('dinosaurContainer');
+        dinosaurContainer.addEventListener('mouseover', () => {
+            dinosaurContainer.classList.add('roar');
+        });
+        dinosaurContainer.addEventListener('mouseout', () => {
+            dinosaurContainer.classList.remove('roar');
+        });
+        dinosaurContainer.addEventListener('focus', () => {
+            dinosaurContainer.classList.add('roar');
+        });
+        dinosaurContainer.addEventListener('blur', () => {
+            dinosaurContainer.classList.remove('roar');
+        });
+    </script>
+</body>
+</html>
